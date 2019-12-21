@@ -1,0 +1,1 @@
+[2019-11-08T03:27:07.645] [INFO] cheese - {"projectName":"koa2-tutorial","serverIp":"172.20.10.2","method":"GET","url":"/api/admin/register","host":"localhost:6720","message":{"responseTime":"响应时间为0.035s"},"userAgent":"PostmanRuntime/7.19.0"}
