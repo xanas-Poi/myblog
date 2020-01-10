@@ -1,4 +1,4 @@
-# Myblog系统
+# Myblog系统(本人小白)
 
 #des 这是一个使用了vue.js + nodde.js(koa2) + mysql(sequelize) + element-ui 搭建的个人博客系统
 
@@ -10,5 +10,5 @@
 #启动系统
 1. 最外层文件目录下 admin目录下 client目录下 使用npm install下载包文件
 2. 最外层文件目录下 命令行工具输入nodemon 运行服务器 (koa2遵循resful API 接口在文件是最外层目录router.js)
-3. admin后台管理 命令行工具输入npm run serve 运行后台
+3. admin后台管理 命令行工具输入npm run serve 运行后台(u:1234 p:1234)
 4. admin后台管理 命令行工具输入npm run serve 运行博客
