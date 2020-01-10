@@ -1,6 +1,6 @@
 # Myblog系统
 
-#des 这是一个使用了vue.js + nodde.js(koa2) + mysql(sequelize)搭建的个人博客系统
+#des 这是一个使用了vue.js + nodde.js(koa2) + mysql(sequelize) + element-ui 搭建的个人博客系统
 
 #目录
 ./最外层目录 ------ node服务器
