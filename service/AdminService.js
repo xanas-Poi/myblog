@@ -1,7 +1,7 @@
 const { Admin } = require('../models/admin')
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken');
-const { jwt_secret, expiresIn } = require('../config');
+const { jwt_secret, expiresIn } = require('../server.base.config');
 
 function getToken(payload = {}) {
     return jwt.sign(payload, jwt_secret, { expiresIn: expiresIn })

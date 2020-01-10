@@ -197,7 +197,7 @@ export default {
 .comments-title {
   padding: 16px 0;
   color: black;
-  font-size: 36px;
+  font-size: 20px;
 }
 
 .comments-create {
@@ -218,8 +218,8 @@ export default {
   }
 
   .comments-item-username {
-    font-size: 22px;
-    color: #409eff;
+    font-size: 16px;
+    color: #757575;
     font-weight: bold;
   }
 

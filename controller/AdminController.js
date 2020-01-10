@@ -5,17 +5,13 @@ const res = new Resolve();
 module.exports = {
 
     register: async (ctx) => {
-        const getData = ctx.request.body;
-        const msg = await AdminService.register(getData);
-        ctx.response.status = 200
+        const msg = await AdminService.register(ctx.request.body);
         ctx.body = res.msg(msg||'用户创建成功', msg?1:0 );
     },
 
     login: async (ctx) => {
-        const getData = ctx.request.body;
-        const token = await AdminService.login(getData);
-        ctx.response.status = 200
-        console.log(token.length)
+        const token = await AdminService.login(ctx.request.body);
+        // console.log(token.length)
         if(token.length>0&&token.length<100){
             ctx.body = res.msg(msg||'登录失败', msg?1:0 );
         }else{
@@ -29,8 +25,7 @@ module.exports = {
     },
 
     getInfo: async(ctx)=>{
-        const getData = ctx.request.body;
-        const msg = await AdminService.getInfo(getData);
+        const msg = await AdminService.getInfo(ctx.request.body);
         ctx.response.status = 200
         if(typeof(msg)==='object'){
             ctx.body = res.json(msg,'获取用户信息成功');

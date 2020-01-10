@@ -19,16 +19,17 @@ export default {
 <style>
 html,
 body {
-  box-sizing: border-box;
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB",
+  "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  background-image: url('./assets/timg.jpg');
+  background-size:cover;
+  background-size:100%;
+  -moz-background-size:100%;
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
-}
-body {
-  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB",
-    "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
-  background: #f8f8f8;
+
 }
 
 section,
@@ -45,6 +46,9 @@ p {
   padding: 0;
 }
 
+a{
+  text-decoration:none;
+}
 li {
   list-style: none;
 }

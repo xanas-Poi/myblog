@@ -6,7 +6,7 @@ const {
     username,
     password,
     dialect
-} = require('./config').mysql
+} = require('./server.base.config').mysql
 
 
 const sequelize = new Sequelize(dbName, username, password, {
@@ -49,6 +49,7 @@ sequelize
     console.error('Unable to connect to the database:', err);
   });
 
+//同步数据库模型专用 此操作将会删除数据库的表重新创建,请谨慎使用
 sequelize.sync({
     force: false //是否覆盖表
 })

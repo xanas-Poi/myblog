@@ -8,9 +8,9 @@
 </template>
 
 <script>
-import adminNav from "../components/adminNav";
-import adminHerder from "../components/adminHeader";
-import breadCrumb from "../components/breadCrumb";
+import adminNav from "./components/adminNav";
+import adminHerder from "./components/adminHeader";
+import breadCrumb from "./components/breadCrumb";
 
 export default {
   components: {

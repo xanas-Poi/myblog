@@ -2,7 +2,6 @@
   <section class="container">
     <article class="article" id="article">
       <ul class="article-box" v-if="list.length > 0">
-        <label>最新博客</label>
         <li class="article-item" v-for="(item, index) in list" :key="index">
           <div class="article-content">
             <h1 class="article-title">
@@ -11,9 +10,9 @@
               }}</router-link>
             </h1>
 
-            <div class="article-info">
-              <p class="article-category" v-if="item.category_detail">
-                {{ item.category_detail.name }}
+            <div class="article-info"  v-if="item.category_detail">
+              <p class="article-category">
+                <i class="el-icon-d-arrow-right"></i> {{ item.category_detail.name }}
               </p>
               <p class="article-browse">
                 <i class="icon el-icon-view"></i> {{ item.browse }}
@@ -23,15 +22,15 @@
                 {{ item.comments_nums }}
               </p>
               <p class="article-create-at">
-                <i class="icon el-icon-time"></i> {{ item.created_at }}
+                <i class="icon el-icon-time"></i> {{ item.createdAt }}
               </p>
             </div>
           </div>
         </li>
 
         <section class="page" v-if="pagination">
-          <!-- <section class="page"> -->
           <el-pagination
+            background="ture"
             layout="prev, pager, next"
             :page-count="pagination.count"
             :current-page="pagination.current_page"
@@ -103,42 +102,30 @@ export default {
 
 <style lang="scss" scoped>
 .container {
-  display: flex;
-  width: 50%;
-  margin: 80px auto;
+  width: 40%;
+  min-width: 400px;
+  margin: 0 auto;
 }
 .article {
-  flex: 9;
-  border-radius: 50px;
-  background: #fff;
-  // box-shadow: 1px 2px 4px #29ee0277;
-  padding: 10px;
   a {
-    text-decoration: none;
-    color: black;
-  }
-  label {
-    font-size: 32px;
-    margin: 0 300px;
-    font-weight: 800;
-    color: black;
-    white-space: nowrap;
+    color: grey;
+    font: bold;
   }
   & .article-item {
+    box-shadow: 1px 30px 200px 220px rgba(0, 0, 0, 0.555);
+    // border-radius: 50%;
+    background: rgba(255, 153, 0, 0.075);
     cursor: pointer;
-    padding: 24px;
-    // display: flex;
-    border-bottom: 1px solid #f4f4f4;
+    padding: 15px 20px;
+    margin-top: 20px;
   }
 
-  .article-content {
-    flex: 1;
-    margin-right: 24px;
+  .article-content{
+    padding: 10px;
   }
 
   & .article-title {
-    color: #464c5b;
-    font-size: 24px;
+    font-size: 22px;
     margin: 0;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -149,28 +136,21 @@ export default {
     & p {
       display: inline-block;
       margin-right: 24px;
-      margin-top: 24px;
-      font-size: 16px;
-      color: #9ea7b4;
+      margin-top: 10px;
+      font-size: 12px;
+      color: grey;
     }
-
-    & p.article-category {
-      height: 32px;
-      line-height: 32px;
-      padding: 0 32px;
-      font-size: 16px;
-      // color: #29ee02;
-      color: black;
-      border-radius: 32px;
-      background: #f8f8f8;
+  }
+  .page {
+    padding: 32px 0;
+    text-align: center;
+    & .el-pagination{
     }
   }
 }
 
-.page {
-  padding: 32px 0;
-  text-align: center;
-}
+
+
 .article-empty {
   text-align: center;
   padding: 24px 0;

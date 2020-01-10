@@ -17,7 +17,7 @@ const actions = {
     return article.destroy(id)
   },
 
-  async detail( { commit }, id) {
+  async detail({ commit }, id) {
     return article.detail(id)
   },
 

@@ -1,58 +1,73 @@
 <template>
-  <nav id="header">
-    <ul>
-      <li class="logo">
-        <a href="/"><img src="../assets/logo.png" alt="LOGO"/></a>
-      </li>
-      <li><a href="/">博客</a></li>
-      <li><a href="/bout">关于</a></li>
-      <li><a href="http://localhost:8081/admin" target="blank">管理</a></li>
-    </ul>
-  </nav>
+  <section class="blog-header">
+    <div class="blog-avator">
+      <img src="../assets/avator.png" alt="blog-avator">
+    </div>
+    <div class="blog-logo">
+      <p>Xanas-Blog</p>
+    </div>
+    <nav class="blog-sort">
+      <ul>
+        <li><a href="/">博客</a></li>
+        <li><a href="/">关于</a></li>
+        <li><a href="/">留言</a></li>
+      </ul>
+    </nav>
+  </section>
 </template>
 
-<script>
-export default {};
+<script>  
+export default {
+
+};
 </script>
 
 <style lang="scss" scoped>
-#header {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 2000;
-  background: white;
-  .logo {
-    position: absolute;
-    width: 200px;
-    height: 48px;
-    margin-left: -190px;
-    margin-top: -35px;
-    & img {
-      width: 100%;
+.blog-header{
+  text-align: center;
+  .blog-avator{
+    img{
+      margin-top: 50px;
+      width: 120px;
+      height: 120px;
     }
   }
-  ul {
-    list-style-type: none;
-    padding: 7px 0 7px 0;
-    overflow: hidden; /* 会消除所有的子元素的浮动，然后进行自适应高度计算，因为父元素没有设定高度，所以不会进行裁剪 */
-    border-bottom: 1px solid rgb(220, 220, 220);
-    li {
-      float: left;
-      position: relative;
-      left: 180px;
-      font-size: 14px;
-      font-weight: 800;
-      margin: 3px 20px 3px 20px;
-      padding: 5px 10px 5px 10px;
-      & a {
-        text-decoration: none;
-        color: black;
-      }
-      & a:visited {
-        color: black;
+  .blog-logo{
+    position: relative;
+    top: 30px;
+    width: 180px;
+    margin: 0 auto;
+    // transform:rotate(-10deg);
+    & p{
+      font: bold;
+      font-size: 24px;
+      text-align: center;
+      color: rgba(0, 0, 0, 0.877);
+      padding: 10px;
+    }
+  }
+  .blog-sort {
+    margin-top: 50px;
+    ul {
+      list-style-type: none;
+      padding: 10px;
+      li {
+        display: inline;
+        font-size: 12px;
+        font-weight: 800;
+        margin: 20px;
+        & a {
+          padding: 5px;
+          color: grey;
+          border-radius: 5px;
+          box-shadow: 1px 2px 3px 2px rgba(0, 0, 0, 0.555);
+        }
+        & a:hover{
+          text-decoration:dotted;
+        }
       }
     }
   }
 }
+
 </style>

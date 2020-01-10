@@ -26,7 +26,7 @@ export default {
   },
   methods: {
     getBreadcrumb() {
-      // console.log(this.$route.meta.title)
+      console.log(this.$route.meta.title)
       this.metaTitle = this.$route.meta;
     }
   }

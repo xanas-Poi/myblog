@@ -1,6 +1,6 @@
 const { ArticleService } = require('../service/ArticleService')
 const { CategoryService } = require('../service/CategoryService')
-const CommentsService = require('../service/CommentsService')
+const { CommentsService } = require('../service/CommentsService')
 
 const {Resolve} = require('../lib/helper');
 const res = new Resolve();
@@ -52,6 +52,7 @@ module.exports = {
 
         ctx.response.status = 200
         if(typeof(article)==='object'){
+            // console.log(article)
             ctx.body = res.json(article,'查找文章详情成功');
         }else{
             ctx.body = res.msg(article,1);

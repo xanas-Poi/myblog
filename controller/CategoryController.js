@@ -1,5 +1,5 @@
 const { CategoryService } = require('../service/CategoryService')
-const {Resolve} = require('../lib/helper');
+const { Resolve } = require('../lib/helper');
 const res = new Resolve();
 
 module.exports = {

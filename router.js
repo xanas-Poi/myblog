@@ -26,7 +26,6 @@ module.exports = (app) =>{
     apiRouter.delete('/article/destroy/:id',ArticleCtrl.destroy);    // 删除文章
     apiRouter.put('/article/update/:id',ArticleCtrl.update);    // 更新文章
     apiRouter.get('/article/detail/:id',ArticleCtrl.detail);  //文章详情
-    
     apiRouter.get('/article/echarts',ArticleCtrl.echarts);  //echart数据
     
 

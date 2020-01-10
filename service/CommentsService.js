@@ -1,10 +1,9 @@
 const { Comments } = require('../models/comments')
 const { Article } = require('../models/Article')
 
-module.exports = {
-    
+class CommentsService {
     //创建评论
-    createComments: async (v) => {
+    static async createComments(v){
         console.log(v)
          // 查询文章
         const article = await Article.findOne({
@@ -23,10 +22,10 @@ module.exports = {
         comments.email = v.email
         comments.nickname = v.nickname
         return comments.save()
-    },
+    }
 
     //删除评论
-    destroyComments: async (id) =>{
+    static async destroyComments(id){
         const comments = await Comments.findOne({
             where: {
                 id
@@ -36,9 +35,9 @@ module.exports = {
             return msg = ('没有找到相关评论');
         }
         comments.destroy()
-    },
+    }
 
-    updateComments: async (id,v) =>{
+    static async updateComments(id,v){
         //findByPk 通过主键来查询一条记录
         const comments = await Comments.findByPk(id);
         if (!comments) {
@@ -51,9 +50,9 @@ module.exports = {
         comments.email = v.email
         comments.nickname = v.nickname
         return comments.save()
-    },
+    }
 
-    detailComments: async (id) =>{
+    static async detailComments(id){
         //通过ID查找评论
         const comments = await Comments.findOne({
             where: {
@@ -66,11 +65,10 @@ module.exports = {
         }else{
             return comments
         };
-    },
-
+    }
 
     // 评论列表
-    getCommentsList: async(page = 1)=>{
+    static async getCommentsList(page = 1){
         const pageSize = 10;
         const comments = await Comments.findAndCountAll({
             limit: pageSize,//每页10条
@@ -90,10 +88,10 @@ module.exports = {
                 total_pages: Math.ceil(comments.count / 10),
             }
         };
-    },
+    }
 
     // 文章下的评论
-    getArticleComments: async(article_id, page = 1, desc = 'createdAt')=>{
+    static async getArticleComments(article_id, page = 1, desc = 'createdAt'){
         const pageSize = 10;
         const comments = await Comments.findAndCountAll({
             where: {
@@ -120,5 +118,5 @@ module.exports = {
             }
         };
     }
-
 }
+module.exports = { CommentsService }

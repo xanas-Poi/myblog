@@ -1,4 +1,4 @@
-const CommentsService = require("../service/CommentsService");
+const { CommentsService } = require("../service/CommentsService");
 const {Resolve} = require('../lib/helper');
 const res = new Resolve();
 

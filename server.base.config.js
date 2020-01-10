@@ -4,6 +4,7 @@ module.exports = {
     /**
      * koa2
      */
+    server_host : '127.0.0.1',
     server_port : 6720,//服务器端口号
 
 
@@ -25,7 +26,12 @@ module.exports = {
         host: 'localhost', // 主机名
         port: 3306, // 端口号，MySQL默认3306
         dialect: 'mysql',//使用的数据库
-    }
+    },
+
+    unlessPath: [ //url白名单 如果不设置默认都是没权限访问的,会返回{code:401}
+        /^\/api\/registe/, //注册
+        // /^\/api\/userLoginForSysAdmin/ //登录
+    ]
 }
 
 

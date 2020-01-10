@@ -5,10 +5,7 @@
 
       <div class="article-info">
         <p class="article-category" v-if="detail.category_detail">
-          {{ detail.category_detail.name }}
-        </p>
-        <p class="article-author">
-          <i class="icon el-icon-user"></i> {{ detail.author }}
+          <i class="el-icon-d-arrow-right"></i>{{ detail.category_detail.name }}
         </p>
         <p class="article-browse">
           <i class="icon el-icon-view"></i> {{ detail.browse }}
@@ -110,18 +107,19 @@ export default {
   box-sizing: border-box;
   position: relative;
   width: 70%;
-  margin: 24px auto;
+  margin: 50px auto;
 
   & .content {
     box-sizing: border-box;
-    padding: 32px;
+    padding: 80px;
     position: relative;
     width: 100%;
-    background: #fff;
+    // background: #fff;
     border-radius: 8px;
 
     & .article-title {
-      font-size: 54px;
+      text-align: center;
+      font-size: 28px;
       color: #404040;
     }
 
@@ -133,16 +131,6 @@ export default {
         margin-top: 24px;
         font-size: 16px;
         color: #9ea7b4;
-      }
-
-      & p.article-category {
-        height: 32px;
-        line-height: 32px;
-        padding: 0 32px;
-        font-size: 16px;
-        color: rgb(60, 255, 0);
-        border-radius: 32px;
-        background: rgb(5, 5, 5);
       }
     }
 
@@ -185,7 +173,7 @@ export default {
 
   & .v-note-wrapper .v-note-panel .v-note-show .v-show-content,
   .v-note-wrapper .v-note-panel .v-note-show .v-show-content-html {
-    padding: 40px !important;
+    padding: 60px !important;
   }
 }
 </style>

@@ -1,7 +1,7 @@
 const articleRouter = {
   path: "/admin",
   meta: { title: "首页", requireAuth: true },
-  component: () => import("@/views/Home.vue"),
+  component: () => import("../../views/layout/index.vue"),
   children: [
 
     {
@@ -22,7 +22,7 @@ const articleRouter = {
       name: "articleList",
       meta: { group: "文章管理", title: "文章 - 列表" },
       component: () => import("@/views/article/list")
-    }
+    },
   ]
 };
 

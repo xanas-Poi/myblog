@@ -1,7 +1,7 @@
 const categoryRouter = {
   path: "/admin",
   meta: { title: "首页", requireAuth: true },
-  component: () => import("@/views/Home.vue"),
+  component: () => import("../../views/layout/index.vue"),
   children: [
     {
       path: "/admin/category/create",
