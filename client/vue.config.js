@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 // If your port is set to 80,
 // use administrator privileges to execute the command line.
 // For example, Mac: sudo npm run
@@ -17,7 +19,7 @@ const productionGzipExtensions = ["js", "css", "scss"];
 const webpack = require("webpack");
 const AddAssetHtmlPlugin = require("add-asset-html-webpack-plugin");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
-
+const TerserPlugin = require("terser-webpack-plugin");
 // function resolve(dir) {
 //   return path.join(__dirname, dir);
 // }
@@ -26,7 +28,7 @@ module.exports = {
   publicPath: process.env.NODE_ENV === "production" ? "./my-project/" : "./", // 部署应用时的基本 URL
   outputDir: "dist", // build打包后产生的文件加名称
   assetsDir: "./static", //放置生成的静态资源 (js、css、img、fonts) 的 (相对于 outputDir 的) 目录。
-  publicPath:'./',
+  publicPath: "./",
   lintOnSave: process.env.NODE_ENV !== "production", //是否在开发环境下通过 eslint-loader 在每次保存时 lint 代码
   productionSourceMap: false, // false 生产环境下css不分离文件、会自动生成一些map文件
   filenameHashing: true, // 默认在生成的静态资源文件名中包含hash以控制缓存
@@ -43,7 +45,6 @@ module.exports = {
     //     errors: true
     // },
   },
-
   // // css的处理
   css: {
     // 当为true时，css文件名可省略 module 默认为 false
@@ -59,54 +60,73 @@ module.exports = {
       sass: {}
     }
   },
-
   //统一配置打包插件
-  configureWebpack: {
-    //别名
-    resolve: {
-      // 配置解析别名
-      alias: {
-        "@$": path.resolve(__dirname, "./src")
-      }
-    },
-    plugins: [
-      //gzip压缩
-      new CompressionWebpackPlugin({
-        filename: "[path].gz[query]",
-        algorithm: "gzip",
-        test: new RegExp("\\.(" + productionGzipExtensions.join("|") + ")$"), //匹配文件名
-        threshold: 10240, //对10K以上的数据进行压缩
-        minRatio: 0.8,
-        deleteOriginalAssets: false //是否删除源文件
-      }),
+  configureWebpack: config => {
+    if (process.env.NODE_ENV === "production") {
+      // 为生产环境修改配置...
+      return {
+        // 打包去掉console 必须引入TerserPlugin
+        optimization: {
+          minimizer: [
+            new TerserPlugin({
+              terserOptions: {
+                compress: {
+                  warnings: false,
+                  drop_console: true,
+                  drop_debugger: true,
+                  pure_funcs: ["console.log"]
+                }
+              }
+            })
+          ]
+        },
+        // 关闭 webpack 的性能提示
+        performance: {
+          hints: false
+        },
+        //别名
+        plugins: [
+          //gzip压缩
+          new CompressionWebpackPlugin({
+            filename: "[path].gz[query]",
+            algorithm: "gzip",
+            test: new RegExp(
+              "\\.(" + productionGzipExtensions.join("|") + ")$"
+            ), //匹配文件名
+            threshold: 10240, //对10K以上的数据进行压缩
+            minRatio: 0.8,
+            deleteOriginalAssets: false //是否删除源文件
+          }),
 
-      new CleanWebpackPlugin(),
-      new webpack.DllReferencePlugin({
-        context: process.cwd(),
-        manifest: require("./public/vendor/vendor-manifest.json")
-      }),
-      // 将 dll 注入到 生成的 html 模板中
-      new AddAssetHtmlPlugin({
-        // dll文件位置
-        filepath: path.resolve(__dirname, "./public/vendor/*.js"),
-        // dll 引用路径
-        publicPath: "./vendor",
-        // dll最终输出的目录
-        outputPath: "./vendor"
-      })
-    ],
-
-    // 关闭警告 webpack 的性能提示
-    performance: {
-      hints: "warning",
-      //入口起点的最大体积 整数类型（以字节为单位）
-      maxEntrypointSize: 50000000,
-      //生成文件的最大体积 整数类型（以字节为单位 300k）
-      maxAssetSize: 30000000,
-      //只给出 js 文件的性能提示
-      assetFilter: function(assetFilename) {
-        return assetFilename.endsWith(".js");
-      }
+          new CleanWebpackPlugin(),
+          new webpack.DllReferencePlugin({
+            context: process.cwd(),
+            manifest: require("./public/vendor/vendor-manifest.json")
+          }),
+          // 将 dll 注入到 生成的 html 模板中
+          new AddAssetHtmlPlugin({
+            // dll文件位置
+            filepath: path.resolve(__dirname, "./public/vendor/*.js"),
+            // dll 引用路径
+            publicPath: "./vendor",
+            // dll最终输出的目录
+            outputPath: "./vendor"
+          })
+        ]
+      };
+    } else {
+      // 为开发环境修改配置...
+      return;
     }
-  }
-};
+  },
+  pages: {
+    index: {
+        // 入口文件
+        entry: './src/main.js',
+        // 模版文件
+        template: 'public/index.html',
+        // 输出文件名
+        filename: 'index.html'
+    }
+},
+}

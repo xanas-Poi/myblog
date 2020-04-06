@@ -21,29 +21,39 @@
 
       <aside class="blog-aside">
         <section class="blogger-info">
-         <p>博主档案</p>
+          <p>博主档案</p>
           <table border="0">
             <tr>
-                <td><i class="iconfont icon-xanasshuiguopingguo" style="color:red"> </i> 昵称：</td>
-                <td>Xanas</td>
+              <td>
+                <i class="iconfont icon-xanasshuiguopingguo" style="color:red">
+                </i>
+                昵称：
+              </td>
+              <td>Xanas</td>
             </tr>
             <tr>
-                <td><i class="iconfont icon-xanasshuiguo7" style="color:yellow" /> 博龄：</td>
-                <td>zero</td>
+              <td>
+                <i class="iconfont icon-xanasshuiguo7" style="color:yellow" />
+                博龄：
+              </td>
+              <td>zero</td>
             </tr>
             <tr>
-                <td><i class="iconfont icon-xanasshuiguo6" style="color:green">
-                    </i> 名言：</td>
-                <td>(#`O′)、咸鱼能立着生活！</td>
+              <td>
+                <i class="iconfont icon-xanasshuiguo6" style="color:green"> </i>
+                名言：
+              </td>
+              <td>(#`O′)、咸鱼能立着生活！</td>
             </tr>
-            </table>
+          </table>
         </section>
 
-          <section class="aside-image">
-          <img src="../../assets/u=1892684072,931382797&fm=26&gp=0.jpg" alt="photo-2">
+        <section class="aside-image">
+          <img
+            src="../../assets/u=1892684072,931382797&fm=26&gp=0.jpg"
+            alt="photo-2"
+          />
         </section>
-
-
       </aside>
     </article>
 
@@ -83,18 +93,18 @@ export default {};
       height: 12rem;
       background: while;
       & h2 {
-        transition: color 0.8s ease-in 0.3s,color 0.6s ease-out 0.3s;
-        -webkit-transition: color 0.8s ease-in 0.3s,color 0.6s ease-out 0.3s;
+        transition: color 0.8s ease-in 0.3s, color 0.6s ease-out 0.3s;
+        -webkit-transition: color 0.8s ease-in 0.3s, color 0.6s ease-out 0.3s;
         text-align: center;
         font-size: 5rem;
         color: #1f7a65;
         font-family: "STFangsong", "Songti TC", "simsun", "宋体", Arial, serif;
         line-height: 2.5em;
       }
-     & h2:hover {
-       color: white;
-       content: '我要消失喽';
-     } 
+      & h2:hover {
+        color: white;
+        content: "我要消失喽";
+      }
     }
   }
 
@@ -113,25 +123,25 @@ export default {};
         background-color: rgb(255, 255, 255);
         height: 20rem;
         // margin-right: 20px;
-        p{
-            font-size: 1.6rem;
-            text-align: center;
-            line-height: 5rem;
-            color: #1f7a65;
-            position: relative;
+        p {
+          font-size: 1.6rem;
+          text-align: center;
+          line-height: 5rem;
+          color: #1f7a65;
+          position: relative;
         }
         table {
-          margin:2% 0 0 6%;
-          tr{
+          margin: 2% 0 0 6%;
+          tr {
             line-height: 2rem;
-          font-size: 1.2rem;
+            font-size: 1.2rem;
           }
         }
       }
-      .aside-image{
+      .aside-image {
         margin: 2rem 0 0 0;
         height: 20rem;
-        img{
+        img {
           width: 320px;
           height: 22rem;
         }

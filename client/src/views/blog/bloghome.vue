@@ -3,7 +3,7 @@
     <ul class="blog-box" v-if="list.length > 0">
       <li class="blog-foreach" v-for="(item, index) in list" :key="index">
         <h2 class="blog-title">
-          <router-link v-bind:to="'/article/' + item.id">{{
+          <router-link v-bind:to="'/article/' + item.id" target="_blank">{{
             item.title
           }}</router-link>
         </h2>
@@ -38,7 +38,7 @@
 
         <section class="blog-button">
           <button>
-            <router-link v-bind:to="'/article/' + item.id"
+            <router-link :to="'/article/' + item.id" target="_blank"
               >查看全文</router-link
             >
           </button>
@@ -217,7 +217,7 @@ export default {
   }
 }
 
-@media screen and (max-width: 960px){
+@media screen and (max-width: 960px) {
   #blog-container {
     width: 100%;
     .blog-box {

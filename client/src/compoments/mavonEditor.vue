@@ -1,17 +1,17 @@
 <template>
-    <mavon-editor
-            ref="md"
-            placeholder="请输入文档内容..."
-            :boxShadow="false"
-            :toolbars="toolbars"
-          />
+  <mavon-editor
+    ref="md"
+    placeholder="请输入文档内容..."
+    :boxShadow="false"
+    :toolbars="toolbars"
+  />
 </template>
- 
+
 <script>
 import { mavonEditor } from "mavon-editor";
 import "mavon-editor/dist/css/index.css";
 export default {
-  components: mavon-editor,
+  components: mavonEditor,
   data() {
     return {
       content: "",
