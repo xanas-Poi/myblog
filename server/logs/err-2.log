@@ -1,0 +1,136 @@
+2020-04-06 18:30:38: (node:9664) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
+Error: bind EADDRINUSE null:6720
+    at listenOnMasterHandle (net.js:1346:16)
+    at shared (internal/cluster/child.js:120:3)
+    at Worker.send (internal/cluster/child.js:91:7)
+    at process.onInternalMessage (internal/cluster/utils.js:45:8)
+    at process.emit (events.js:203:15)
+    at emit (internal/child_process.js:832:12)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+2020-04-06 18:30:41: (node:116) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
+Error: bind EADDRINUSE null:6720
+    at listenOnMasterHandle (net.js:1346:16)
+    at shared (internal/cluster/child.js:120:3)
+    at Worker.send (internal/cluster/child.js:91:7)
+    at process.onInternalMessage (internal/cluster/utils.js:45:8)
+    at process.emit (events.js:203:15)
+    at emit (internal/child_process.js:832:12)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+2020-04-06 18:30:44: (node:11112) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
+Error: bind EADDRINUSE null:6720
+    at listenOnMasterHandle (net.js:1346:16)
+    at shared (internal/cluster/child.js:120:3)
+    at Worker.send (internal/cluster/child.js:91:7)
+    at process.onInternalMessage (internal/cluster/utils.js:45:8)
+    at process.emit (events.js:203:15)
+    at emit (internal/child_process.js:832:12)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+2020-04-06 18:30:46: (node:9708) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
+Error: bind EADDRINUSE null:6720
+    at listenOnMasterHandle (net.js:1346:16)
+    at shared (internal/cluster/child.js:120:3)
+    at Worker.send (internal/cluster/child.js:91:7)
+    at process.onInternalMessage (internal/cluster/utils.js:45:8)
+    at process.emit (events.js:203:15)
+    at emit (internal/child_process.js:832:12)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+2020-04-06 18:30:49: (node:7204) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
+Error: bind EADDRINUSE null:6720
+    at listenOnMasterHandle (net.js:1346:16)
+    at shared (internal/cluster/child.js:120:3)
+    at Worker.send (internal/cluster/child.js:91:7)
+    at process.onInternalMessage (internal/cluster/utils.js:45:8)
+    at process.emit (events.js:203:15)
+    at emit (internal/child_process.js:832:12)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+2020-04-06 18:30:52: (node:9944) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
+Error: bind EADDRINUSE null:6720
+    at listenOnMasterHandle (net.js:1346:16)
+    at shared (internal/cluster/child.js:120:3)
+    at Worker.send (internal/cluster/child.js:91:7)
+    at process.onInternalMessage (internal/cluster/utils.js:45:8)
+    at process.emit (events.js:203:15)
+    at emit (internal/child_process.js:832:12)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+2020-04-06 18:30:54: (node:7776) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
+Error: bind EADDRINUSE null:6720
+    at listenOnMasterHandle (net.js:1346:16)
+    at shared (internal/cluster/child.js:120:3)
+    at Worker.send (internal/cluster/child.js:91:7)
+    at process.onInternalMessage (internal/cluster/utils.js:45:8)
+    at process.emit (events.js:203:15)
+    at emit (internal/child_process.js:832:12)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+2020-04-06 18:30:56: (node:9664) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
+Error: bind EADDRINUSE null:6720
+    at listenOnMasterHandle (net.js:1346:16)
+    at shared (internal/cluster/child.js:120:3)
+    at Worker.send (internal/cluster/child.js:91:7)
+    at process.onInternalMessage (internal/cluster/utils.js:45:8)
+    at process.emit (events.js:203:15)
+    at emit (internal/child_process.js:832:12)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+2020-04-06 18:30:58: (node:10744) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
+Error: bind EADDRINUSE null:6720
+    at listenOnMasterHandle (net.js:1346:16)
+    at shared (internal/cluster/child.js:120:3)
+    at Worker.send (internal/cluster/child.js:91:7)
+    at process.onInternalMessage (internal/cluster/utils.js:45:8)
+    at process.emit (events.js:203:15)
+    at emit (internal/child_process.js:832:12)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+2020-04-06 18:31:00: (node:9980) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
+Error: bind EADDRINUSE null:6720
+    at listenOnMasterHandle (net.js:1346:16)
+    at shared (internal/cluster/child.js:120:3)
+    at Worker.send (internal/cluster/child.js:91:7)
+    at process.onInternalMessage (internal/cluster/utils.js:45:8)
+    at process.emit (events.js:203:15)
+    at emit (internal/child_process.js:832:12)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+2020-04-06 18:31:02: (node:3548) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
+Error: bind EADDRINUSE null:6720
+    at listenOnMasterHandle (net.js:1346:16)
+    at shared (internal/cluster/child.js:120:3)
+    at Worker.send (internal/cluster/child.js:91:7)
+    at process.onInternalMessage (internal/cluster/utils.js:45:8)
+    at process.emit (events.js:203:15)
+    at emit (internal/child_process.js:832:12)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+2020-04-06 18:31:05: (node:7924) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
+2020-04-06 18:31:07: (node:10644) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
+Error: bind EADDRINUSE null:6720
+    at listenOnMasterHandle (net.js:1346:16)
+    at shared (internal/cluster/child.js:120:3)
+    at Worker.send (internal/cluster/child.js:91:7)
+    at process.onInternalMessage (internal/cluster/utils.js:45:8)
+    at process.emit (events.js:203:15)
+    at emit (internal/child_process.js:832:12)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+2020-04-06 18:31:09: (node:10752) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
+Error: bind EADDRINUSE null:6720
+    at listenOnMasterHandle (net.js:1346:16)
+    at shared (internal/cluster/child.js:120:3)
+    at Worker.send (internal/cluster/child.js:91:7)
+    at process.onInternalMessage (internal/cluster/utils.js:45:8)
+    at process.emit (events.js:203:15)
+    at emit (internal/child_process.js:832:12)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+2020-04-06 18:31:12: (node:10684) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
+Error: bind EADDRINUSE null:6720
+    at listenOnMasterHandle (net.js:1346:16)
+    at shared (internal/cluster/child.js:120:3)
+    at Worker.send (internal/cluster/child.js:91:7)
+    at process.onInternalMessage (internal/cluster/utils.js:45:8)
+    at process.emit (events.js:203:15)
+    at emit (internal/child_process.js:832:12)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+2020-04-06 18:31:15: (node:6736) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
+Error: bind EADDRINUSE null:6720
+    at listenOnMasterHandle (net.js:1346:16)
+    at shared (internal/cluster/child.js:120:3)
+    at Worker.send (internal/cluster/child.js:91:7)
+    at process.onInternalMessage (internal/cluster/utils.js:45:8)
+    at process.emit (events.js:203:15)
+    at emit (internal/child_process.js:832:12)
+    at process._tickCallback (internal/process/next_tick.js:63:19)

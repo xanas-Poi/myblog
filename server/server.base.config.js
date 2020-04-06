@@ -4,8 +4,8 @@ module.exports = {
     /**
      * koa2
      */
-    server_host : '127.0.0.1',
-    server_port : 6720,//服务器端口号
+    server_host:'127.0.0.1',
+    server_port:'6720',//服务器端口号
 
 
     /**

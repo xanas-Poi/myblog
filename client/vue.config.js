@@ -25,7 +25,8 @@ const CleanWebpackPlugin = require("clean-webpack-plugin");
 module.exports = {
   publicPath: process.env.NODE_ENV === "production" ? "./my-project/" : "./", // 部署应用时的基本 URL
   outputDir: "dist", // build打包后产生的文件加名称
-  assetsDir: "static", //放置生成的静态资源 (js、css、img、fonts) 的 (相对于 outputDir 的) 目录。
+  assetsDir: "./static", //放置生成的静态资源 (js、css、img、fonts) 的 (相对于 outputDir 的) 目录。
+  publicPath:'./',
   lintOnSave: process.env.NODE_ENV !== "production", //是否在开发环境下通过 eslint-loader 在每次保存时 lint 代码
   productionSourceMap: false, // false 生产环境下css不分离文件、会自动生成一些map文件
   filenameHashing: true, // 默认在生成的静态资源文件名中包含hash以控制缓存
@@ -65,7 +66,7 @@ module.exports = {
     resolve: {
       // 配置解析别名
       alias: {
-        "@": path.resolve(__dirname, "./src")
+        "@$": path.resolve(__dirname, "./src")
       }
     },
     plugins: [
