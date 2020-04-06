@@ -217,7 +217,7 @@ export default {
   }
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 960px){
   #blog-container {
     width: 100%;
     .blog-box {

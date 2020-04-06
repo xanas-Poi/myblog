@@ -14,10 +14,6 @@ Vue.use(ElementUI);
 // import "element-ui/lib/theme-chalk/index.css";
 // Vue.use(element);
 
-//mavon-editor 全局
-// import mavonEditor from "mavon-editor";
-// import "mavon-editor/dist/css/index.css";
-// Vue.use(mavonEditor);
 
 new Vue({
   router,

@@ -42,15 +42,14 @@
 <script>
 import { mapActions } from "vuex";
 import VComments from "./blogcomment";
-import utils from "../../utils/utils";
+import utils from "../../utils/utils"
 //editor
-import { mavonEditor } from "mavon-editor";
-import "mavon-editor/dist/css/index.css";
+import  mavonEditor  from "../../compoments/mavonEditor";
 export default {
   name: "detailpage",
   components: {
     VComments,
-    mavonEditor
+    mavonEditor,
   },
   data() {
     return {
@@ -143,7 +142,6 @@ export default {
 @media screen and (max-width: 960px) {
   .container {
     width: 100%;
-    min-width: 400px;
     margin-left: 0;
   }
   .container .content .article-info p.article-createdAt {

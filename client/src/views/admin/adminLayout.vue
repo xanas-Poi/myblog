@@ -10,7 +10,6 @@
             管理员：
             <i class="iconfont icon-xanasshuiguo3"><u>xanas</u></i>
           </span>
-
           <button><a v-on:click="userLogout()">退出登录</a></button>
         </div>
       </el-header>
