@@ -1,6 +1,6 @@
-### title:Myblog
+### Myblog-api
 
-### des 这是一个使用了koa2框架搭建的个人博客系统
+### des:该是一个使用了koa2框架搭建的个人博客服务API
 
 ### 
 
