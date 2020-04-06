@@ -1,14 +1,13 @@
+/* eslint-disable */
 import article from "../../api/article";
 
-const state = {
-  // 文章
+const state = {  // 文章
   articleList: [],
   // 分页
   pagination: null,
   // 文章详情
   articleDetail: null
-};
-
+}
 const mutations = {
   // 设置文章列表
   SET_ARTICLE_LIST(state, list) {
@@ -22,10 +21,10 @@ const mutations = {
   SET_ARTICLE_DETAIL(state, data) {
     state.articleDetail = data;
   }
-};
+}
 
 const actions = {
-  /**
+    /**
    * 获取文章列表
    * @param commit
    * @param params
@@ -35,7 +34,6 @@ const actions = {
     let re = await article.list(params);
     commit("SET_ARTICLE_LIST", re.data.data.data);
     commit("SET_PAGINATION", re.data.data.meta);
-
     return re;
   },
 
@@ -47,14 +45,38 @@ const actions = {
   async getArticleDetail({ commit }, id) {
     let re = await article.detail(id);
     commit("SET_ARTICLE_DETAIL", re);
-
     return re;
-  }
+  },
+  
+  async list({ commit }, data) {
+    return article.list(data)
+  },
+
+  async create({ commit }, data) {
+    return article.create(data)
+  },
+
+  async destroy({ commit }, id) {
+    return article.destroy(id)
+  },
+
+  async detail({ commit }, id) {
+    return article.detail(id)
+  },
+
+  async update({ commit }, data) {
+    return article.update(data)
+  },
+  
+  async echarts({ commit }) {
+    return article.echarts()
+  },
+
 };
 
 export default {
   namespaced: true,
   state,
-  actions,
-  mutations
+  mutations,
+  actions
 };

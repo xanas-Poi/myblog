@@ -1,0 +1,149 @@
+{
+  "id": "1734260",
+  "name": "vue-xanas",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-xanas",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "5158677",
+      "name": "水果区",
+      "font_class": "shuiguoqu",
+      "unicode": "e62f",
+      "unicode_decimal": 58927
+    },
+    {
+      "icon_id": "5171737",
+      "name": "水果苹果",
+      "font_class": "shuiguopingguo",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    },
+    {
+      "icon_id": "6586926",
+      "name": "水果",
+      "font_class": "shuiguo5",
+      "unicode": "e664",
+      "unicode_decimal": 58980
+    },
+    {
+      "icon_id": "7838120",
+      "name": "水果卷",
+      "font_class": "shuiguojuan",
+      "unicode": "e629",
+      "unicode_decimal": 58921
+    },
+    {
+      "icon_id": "7885101",
+      "name": "水果",
+      "font_class": "shuiguo6",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "8578040",
+      "name": "水果捞",
+      "font_class": "shuiguolao",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "9499801",
+      "name": "水果",
+      "font_class": "shuiguo7",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    },
+    {
+      "icon_id": "10779833",
+      "name": "水果",
+      "font_class": "shuiguo8",
+      "unicode": "e62c",
+      "unicode_decimal": 58924
+    },
+    {
+      "icon_id": "11086032",
+      "name": "水果",
+      "font_class": "shuiguo9",
+      "unicode": "e612",
+      "unicode_decimal": 58898
+    },
+    {
+      "icon_id": "12664878",
+      "name": "水果",
+      "font_class": "fruits",
+      "unicode": "e613",
+      "unicode_decimal": 58899
+    },
+    {
+      "icon_id": "1319164",
+      "name": "水果",
+      "font_class": "shuiguo",
+      "unicode": "e680",
+      "unicode_decimal": 59008
+    },
+    {
+      "icon_id": "2075165",
+      "name": "水果",
+      "font_class": "shuiguo1",
+      "unicode": "e611",
+      "unicode_decimal": 58897
+    },
+    {
+      "icon_id": "2602170",
+      "name": "水果",
+      "font_class": "icon-test",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "3755871",
+      "name": "水果",
+      "font_class": "shuiguo2",
+      "unicode": "e615",
+      "unicode_decimal": 58901
+    },
+    {
+      "icon_id": "3889348",
+      "name": "水果",
+      "font_class": "shuiguo3",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    },
+    {
+      "icon_id": "5033765",
+      "name": "生鲜-水果3",
+      "font_class": "shengxian-shuiguo",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "5033767",
+      "name": "生鲜-水果4",
+      "font_class": "shengxian-shuiguo1",
+      "unicode": "e605",
+      "unicode_decimal": 58885
+    },
+    {
+      "icon_id": "5033774",
+      "name": "生鲜-水果2",
+      "font_class": "shengxian-shuiguo2",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "5090380",
+      "name": "水果",
+      "font_class": "baixiangguo",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    },
+    {
+      "icon_id": "5126086",
+      "name": "水果",
+      "font_class": "shuiguo4",
+      "unicode": "e60e",
+      "unicode_decimal": 58894
+    }
+  ]
+}

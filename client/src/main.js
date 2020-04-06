@@ -1,19 +1,23 @@
 import Vue from "vue";
 import App from "./App.vue";
-import router from "@/router/index.js";
-import store from "@/store/index.js";
+import router from "./router";
+import store from "./store"; //vuex
+import "./assets/icons/iconfont.css"; //icons
+import "./assets/css/base.css"; //基础样式
 
-//饿了吗ui
 import ElementUI from "element-ui";
 import "element-ui/lib/theme-chalk/index.css";
 Vue.use(ElementUI);
 
-//mavon-editor
-import mavonEditor from "mavon-editor";
-import "mavon-editor/dist/css/index.css";
-Vue.use(mavonEditor);
+//按需
+// import element from "./utils/elementUi"
+// import "element-ui/lib/theme-chalk/index.css";
+// Vue.use(element);
 
-Vue.config.productionTip = false;
+//mavon-editor 全局
+// import mavonEditor from "mavon-editor";
+// import "mavon-editor/dist/css/index.css";
+// Vue.use(mavonEditor);
 
 new Vue({
   router,

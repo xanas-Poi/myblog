@@ -2,6 +2,20 @@ import axios from "../utils/axios";
 
 export default {
   /**
+   * /获取文章下的all评论
+   * @function list
+   * @param
+   * 接口参数 -- 文章id
+   */
+  allList(params) {
+    return axios({
+      url: "/comments/list",
+      method: "get",
+      params
+    });
+  },
+
+  /**
    * /获取文章下的评论列表
    * @function list
    * @param article_id
@@ -29,6 +43,27 @@ export default {
       url: "/comments/create",
       method: "post",
       data
+    });
+  },
+
+  destory(id) {
+    return axios({
+      url: "/comments/destroy/" + id,
+      method: "delete"
+    });
+  },
+
+  detail(id) {
+    return axios({
+      url: "/comments/detail/" + id,
+      method: "get"
+    });
+  },
+
+  omments(id) {
+    return axios({
+      url: "/comments/" + id,
+      method: "get"
     });
   }
 };
