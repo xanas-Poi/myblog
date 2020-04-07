@@ -1,6 +1,12 @@
 <template>
   <div class="commentslist">
-    <el-table stripe :data="list">
+    <el-table
+      stripe
+      :data="list"
+      :row-style="{ height: '40px' }"
+      :cell-style="{ padding: '5px' }"
+      style="font-size: 12px"
+    >
       <el-table-column label="ID" prop="id" width="80"> </el-table-column>
       <el-table-column label="昵称" prop="nickname"> </el-table-column>
       <el-table-column label="邮箱" prop="email"> </el-table-column>
@@ -87,8 +93,10 @@ export default {
 
 <style lang="scss" scoped>
 .commentslist {
-  margin: 15px auto;
-  border-top: 1px solid whitesmoke;
+  margin: 2.5rem auto;
+  & .el-table {
+    border: 1px solid rgb(204, 204, 204);
+  }
   & .el-pagination {
     text-align: center;
     margin-top: 5px;

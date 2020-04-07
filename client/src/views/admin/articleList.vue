@@ -1,6 +1,12 @@
 <template>
   <div class="articleList">
-    <el-table :data="list" stripe>
+    <el-table
+      :data="list"
+      stripe
+      :row-style="{ height: '40px' }"
+      :cell-style="{ padding: '5px' }"
+      style="font-size: 12px"
+    >
       <el-table-column label="ID" prop="id" width="50"></el-table-column>
       <el-table-column label="标题" prop="title" show-overflow-tooltip>
       </el-table-column>
@@ -101,11 +107,12 @@ export default {
 
 <style lang="scss" scoped>
 .articleList {
-  margin: 15px auto;
+  margin: 2.5rem auto;
   border-top: 1px solid whitesmoke;
   & .el-pagination {
     text-align: center;
     margin-top: 5px;
+    background-color: whitesmoke;
   }
   & .el-button--primary {
     background-color: #ffd04e;

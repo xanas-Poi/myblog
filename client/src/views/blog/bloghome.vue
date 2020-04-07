@@ -127,10 +127,9 @@ export default {
       .blog-title {
         font-weight: normal;
         font-size: 3.2rem;
-        line-height: 1.6em;
         margin-top: 2rem;
         line-height: normal;
-        word-wrap: break-word;
+        // word-wrap: break-word;
         // white-space: nowrap;
         text-overflow: ellipsis;
         a {
@@ -217,7 +216,7 @@ export default {
   }
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 960px) and (min-width: 375px) {
   #blog-container {
     width: 100%;
     .blog-box {
@@ -226,6 +225,63 @@ export default {
     }
     .blog-title {
       font-size: 2rem;
+    }
+  }
+}
+@media screen and (max-width: 376px) and(min-width: 320px) {
+  #blog-container {
+    .blog-box {
+      margin: 0;
+      padding: 0;
+    }
+    .blog-title {
+      font-size: 2rem;
+    }
+    .blog-foreach {
+      width: 95%;
+      padding: 1rem;
+    }
+    .content-box {
+      .blog-content {
+        font-size: smaller;
+        // margin-right: 20px;
+        line-height: 2rem;
+        text-overflow: clip;
+        word-wrap: normal;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 10px;
+        margin-inline-end: 10px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #blog-container {
+    .blog-box {
+      margin: 0;
+      padding: 0;
+    }
+    .blog-title {
+      font-size: 2rem;
+    }
+    .blog-foreach {
+      width: 80%;
+      padding: 1rem;
+    }
+    .content-box {
+      .blog-content {
+        font-size: smaller;
+        // margin-right: 20px;
+        line-height: 2rem;
+        text-overflow: clip;
+        word-wrap: normal;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 10px;
+        margin-inline-end: 10px;
+      }
     }
   }
 }

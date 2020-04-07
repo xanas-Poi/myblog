@@ -1,6 +1,12 @@
 <template>
   <div class="categorylist">
-    <el-table stripe :data="categoryList">
+    <el-table
+      stripe
+      :data="categoryList"
+      :row-style="{ height: '40px' }"
+      :cell-style="{ padding: '10px' }"
+      style="font-size: 12px"
+    >
       <el-table-column label="索引" type="index" width="70"> </el-table-column>
       <el-table-column label="分类ID" prop="id" width="70"> </el-table-column>
       <el-table-column label="分类名称" prop="name" width="100">
@@ -71,7 +77,7 @@ export default {
 
 <style lang="scss" scoped>
 .categorylist {
-  margin: 15px 12%;
+  margin: 50px 12%;
   border-top: 1px solid whitesmoke;
   & .el-button--primary {
     background-color: #ffd04e;

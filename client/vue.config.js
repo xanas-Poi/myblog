@@ -20,6 +20,7 @@ const webpack = require("webpack");
 const AddAssetHtmlPlugin = require("add-asset-html-webpack-plugin");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
+// const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 // function resolve(dir) {
 //   return path.join(__dirname, dir);
 // }
@@ -37,13 +38,22 @@ module.exports = {
     port,
     host,
     open: true, //运行服务器自动打开
-    hotOnly: true // 热更新
+    hotOnly: true, // 热更新
     // https: false,
     // 可以通过设置让浏览器 overlay 同时显示警告和错误：
     // overlay: {
-    //     warnings: true,
-    //     errors: true
+    //     warnings: false,
+    //     errors: false,
     // },
+    proxy: {
+      '/api': {
+        target: 'http://localhost:6720/api',
+        changeOrigin: true,
+        pathRewrite: {
+          '^/api': ''
+        }
+      }
+    }
   },
   // // css的处理
   css: {
@@ -66,6 +76,8 @@ module.exports = {
       // 为生产环境修改配置...
       return {
         // 打包去掉console 必须引入TerserPlugin
+        
+
         optimization: {
           minimizer: [
             new TerserPlugin({
@@ -80,6 +92,8 @@ module.exports = {
             })
           ]
         },
+        
+        
         // 关闭 webpack 的性能提示
         performance: {
           hints: false
@@ -98,6 +112,19 @@ module.exports = {
             deleteOriginalAssets: false //是否删除源文件
           }),
 
+          //代码压缩
+          // new UglifyJsPlugin({
+          //   uglifyOptions: {
+          //       compress: {
+          //           drop_debugger: true,
+          //           drop_console: true,  //生产环境自动删除console
+          //       },
+          //       warnings: false,
+          //   },
+          //   sourceMap: false,
+          //   parallel: true,//使用多进程并行运行来提高构建速度。默认并发运行数：os.cpus().length - 1。
+          // }),
+
           new CleanWebpackPlugin(),
           new webpack.DllReferencePlugin({
             context: process.cwd(),
@@ -111,7 +138,7 @@ module.exports = {
             publicPath: "./vendor",
             // dll最终输出的目录
             outputPath: "./vendor"
-          })
+          }),
         ]
       };
     } else {

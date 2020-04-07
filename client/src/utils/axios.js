@@ -1,5 +1,4 @@
 import axios from "axios";
-import { Message } from "element-ui";
 import { getToken } from "@/utils/session";
 import store from "../store";
 
@@ -28,7 +27,7 @@ axios.interceptors.response.use(
   response => {
     console.log(response);
     if (response.data.errorCode == 1) {
-      Message({
+      this.$Message({
         message: response.data.msg || "Error",
         type: "error",
         duration: 5 * 1000
@@ -45,7 +44,7 @@ axios.interceptors.response.use(
   error => {
     console.log("err" + error); // for debug
     if (error.response.status == 401) {
-      Message({
+      this.$Message({
         message: error.response.data || "Error",
         type: "error",
         duration: 5 * 1000

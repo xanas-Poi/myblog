@@ -18,6 +18,7 @@
           <!-- Nav start -->
           <el-row class="tac">
             <el-menu
+              style="height:43.2rem;"
               router
               :default-active="this.$route.path"
               class="el-menu-vertical-demo"
@@ -129,7 +130,6 @@ export default {
   },
   methods: {
     getBreadcrumb() {
-      console.log(this.$route.path);
       this.metaTitle = this.$route.meta;
     },
     userLogout() {

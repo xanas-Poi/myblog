@@ -1,10 +1,12 @@
 <template>
-  <mavon-editor
-    ref="md"
-    placeholder="请输入文档内容..."
-    :boxShadow="false"
-    :toolbars="toolbars"
-  />
+  <div class="mavon-editor">
+    <mavon-editor
+      ref="md"
+      placeholder="请输入文档内容..."
+      :boxShadow="false"
+      :toolbars="toolbars"
+    />
+  </div>
 </template>
 
 <script>

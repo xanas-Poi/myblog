@@ -1,6 +1,6 @@
 <template>
   <section class="container" v-if="detail">
-    <section class="article-content">
+    <section class="article-content" id="article-content">
       <h1 class="article-title">{{ detail.title }}</h1>
 
       <div class="article-info" v-if="detail.category_detail">
@@ -15,7 +15,7 @@
 
       <div class="article-detail" id="article-detail">
         <mavonEditor
-          style="height: 100%;padding:5%"
+          style="height: 100%"
           :ishljs="true"
           v-html="detail.content"
           :defaultOpen="'preview'"

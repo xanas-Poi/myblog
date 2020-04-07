@@ -56,7 +56,7 @@
           </div>
           <div class="comments-item-content">
             <mavonEditor
-              style="min-height: 0;width: 100%"
+              style="min-height: 0; width: 90% "
               :ishljs="true"
               v-model="item.content"
               :defaultOpen="'preview'"

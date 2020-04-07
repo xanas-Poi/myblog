@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import Canvas from "@/assets/js/canvas-nest.min.js";
+import Canvas from "./assets/js/canvas-nest.min.js";
 export default {
   name: "App",
   components: {
